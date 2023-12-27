@@ -8,7 +8,7 @@
   }
   /* header */
   .header {
-    @apply py-6 bg-green-400;
+    @apply py-6 bg-green-300;
   }
   .header .header__wrapper {
     @apply flex items-center justify-between;
@@ -21,12 +21,66 @@
   }
   /* banner */
   .banner {
-    @apply py-6;
+    @apply py-10;
   }
   .banner .banner__wrapper {
     @apply grid grid-cols-2 items-center gap-10;
   }
+  .banner .banner__wrapper .banner__text h1 {
+    @apply text-5xl font-bold text-center;
+  }
   .banner .banner__wrapper .my-slider img {
     @apply w-full h-[30rem];
   }
+  /* slider */
+  .tns-outer [data-action] {
+    @apply overflow-hidden max-w-[45rem];
+  }
+  button {
+    @apply hidden;
+  }
+  .tns-nav {
+    @apply text-center bg-green-300;
+  }
+
+  .tns-nav-active {
+    @apply bg-green-400;
+  }
+
+  /* accordion */
+  .accordion {
+    @apply py-10 bg-green-300;
+  }
+  .accordion .accordion__wrapper {
+    @apply grid grid-cols-2 gap-10 items-center;
+  }
+  .accordion .accordion__tab {
+    @apply bg-green-900 m-3;
+  }
+
+  .accordion .accordion__tab h4,
+  i {
+    @apply px-4 py-2 text-stone-300 font-semibold text-[1.2rem];
+  }
+
+  .accordion .accordion__right {
+    @apply py-3;
+  }
+  .accordion .accordion__right .accordion__img img {
+    @apply w-full h-[25rem];
+  }
+  .accordion .accordion__tab i {
+    @apply float-right;
+  }
+  .accordion .accordion__tab i.open {
+    @apply rotate-[180deg];
+  }
+  .accordion .accordion__tab p {
+    @apply h-auto max-h-0 overflow-hidden ease-in-out duration-100;
+  }
+  .accordion .accordion__tab p.open {
+    @apply max-h-[50rem] bg-stone-300 p-4 text-justify;
+  }
+
+  /* tabs */
 }
