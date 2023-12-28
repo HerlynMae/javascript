@@ -21,27 +21,35 @@ accordions.forEach((accordion) => {
 
 // tabs
 
-// const tabsNav = document.querySelectorAll(".tabs__link");
-// const tabsContent = document.querySelectorAll(".tabs__image");
+const tabsNav = document.querySelectorAll(".tabs__link");
+const tabsContent = document.querySelectorAll(".tabs__image");
 
-// tabsNav.forEach((tab) => {
-//   tab.addEventListener("click", () => {
-//     removeActiveTab();
-//     tab.classList.add("active");
-//     const activeContent = document.querySelector(`#${tab.id}-img`);
-//     removeActiveContent();
-//     activeContent.classList.add("active");
-//   });
-// });
+tabsNav.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    removeActiveTab();
+    tab.classList.add("active");
+    const activeContent = document.querySelector(`#${tab.id}-content`);
+    removeActiveContent();
+    activeContent.classList.add("active");
+  });
+});
 
-// function removeActiveTab() {
-//   tabsNav.forEach((tab) => {
-//     tab.classList.remove("active");
-//   });
-// }
+function removeActiveTab() {
+  tabsNav.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+}
 
-// function removeActiveContent() {
-//   tabsContent.forEach((tab) => {
-//     tab.classList.remove("active");
-//   });
-// }
+function removeActiveContent() {
+  tabsContent.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+}
+
+// progress bar
+const spans = document.querySelectorAll(".progress__bar span");
+
+spans.forEach((span) => {
+  span.style.width = span.dataset.width;
+  span.innerHTML = span.dataset.width;
+});
