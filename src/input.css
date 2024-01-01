@@ -13,23 +13,32 @@
   .header .header__wrapper {
     @apply flex items-center justify-between;
   }
-  .header .header__wrapper ul {
-    @apply flex;
+  .header .header__nav {
+    @apply z-50 flex flex-col lg:flex-row bg-stone-900 lg:bg-none h-[100vh] 
+    w-full absolute top-[4.5rem] right-[-100%] text-stone-300 text-center
+  lg:text-black items-center justify-center ease-in-out duration-500;
     & li {
-      @apply lg:mr-4 lg:block hidden;
+      @apply lg:mr-4;
     }
+  }
+
+  .header__nav.open {
+    @apply right-0;
   }
   .toggle__menu span {
     @apply lg:hidden  absolute content-["*"] h-1 w-10
     bg-black right-5 rounded-lg;
+  }
+  .toggle__menu.open span {
+    @apply rotate-180;
     &:first-child {
-      @apply top-5;
+      @apply translate-y-[0px] translate-x-[6px] rotate-[45deg];
     }
     &:nth-child(2) {
-      @apply top-8;
+      @apply opacity-0;
     }
     &:last-child {
-      @apply top-11;
+      @apply translate-y-[0px] translate-x-[-6px] rotate-[-45deg];
     }
   }
   .banner {

@@ -8,6 +8,15 @@ var slider = tns({
   controls: false,
   navPosition: "bottom",
 });
+// toggle menu
+
+const header = document.querySelector(".header__nav");
+const toggle = document.querySelector(".toggle__menu");
+
+toggle.addEventListener("click", () => {
+  header.classList.toggle("open");
+  toggle.classList.toggle("open");
+});
 
 // accordion
 const accordions = document.querySelectorAll("h4");
@@ -20,7 +29,6 @@ accordions.forEach((accordion) => {
 });
 
 // tabs
-
 const tabsNav = document.querySelectorAll(".tabs__link");
 const tabsContent = document.querySelectorAll(".tabs__image");
 
